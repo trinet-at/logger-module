@@ -1,0 +1,21 @@
+{
+    "name": "trinet/logger-module",
+    "description": "Logger module for Zend Framework",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.1",
+        "zendframework/zend-log": "^2.9",
+        "zendframework/zend-mvc": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Trinet\\LoggerModule\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
