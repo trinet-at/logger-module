@@ -11,9 +11,9 @@ class LoggerFactory
     public function __invoke(ContainerInterface $container): ZendLogger
     {
         $path = $this->getConfig($container)['trinet']['logger']['path'];
-        $dataFormat = $this->getConfig($container)['trinet']['logger']['date-format'];
+        $dateformat = $this->getConfig($container)['trinet']['logger']['date-format'];
         $logger = new ZendLogger;
-        $writer = new Stream($path . date($dataFormat) . '-error.log');
+        $writer = new Stream($path . date($dateformat) . '-error.log');
         $logger->addWriter($writer);
 
         return $logger;

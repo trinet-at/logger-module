@@ -15,6 +15,11 @@
             "Trinet\\LoggerModule\\": "src/"
         }
     },
+    "extra": {
+        "zf": {
+            "component": "Trinet\\LoggerModule"
+        }
+    },
     "config": {
         "sort-packages": true
     }
