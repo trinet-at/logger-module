@@ -2,7 +2,7 @@
 
 namespace Trinet\LoggerModule;
 
-use Exception;
+use Throwable;
 use Trinet\LoggerModule\Factory\LoggerFactory;
 use Zend\EventManager\EventInterface;
 use Zend\Log\Logger;
@@ -66,7 +66,7 @@ class Module implements ServiceProviderInterface, ConfigProviderInterface, Boots
         return $sm->get(self::LOGGER);
     }
 
-    private function fetchMvcException(MvcEvent $mvcEvent): ?Exception
+    private function fetchMvcException(MvcEvent $mvcEvent): ?Throwable
     {
         return $mvcEvent->getParam('exception');
     }
